@@ -16,7 +16,7 @@ export default function SkillBars(props) {
 
     return (
         <div style={containerStyle}>
-            <div>
+            <div style={barStyle}>
                 {skillsData.map((skillData, index) => (
                     <SkillBar
                         key={index}
@@ -32,11 +32,17 @@ export default function SkillBars(props) {
 // Styles are written in object syntax
 // Learn more: https://reactjs.org/docs/dom-elements.html#style
 const containerStyle = {
+    border: "1px solid red",
     height: "100%",
+    width: "400px",
     display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    overflow: "hidden",
+    // justifyContent: "center",
+    // alignItems: "center",
+    // overflow: "hidden",
+}
+
+const barStyle = {
+    width: "100%",
 }
 
 // Dummy data for skills
